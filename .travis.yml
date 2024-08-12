@@ -12,7 +12,7 @@ install:
   - npm install
 
 before_script:
- # - npm install -g gulp
+  # - npm install -g gulp
 
 
 script:
@@ -22,16 +22,16 @@ script:
 after_script:
   - cd ./public
   - git init
-  - git config user.name "yourusername"
-  - git config user.email "youremail@xx.com"
+  - git config user.name "Deepcity"
+  - git config user.email "f1159472899@163.com"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" main:main
 # E: Build LifeCycle
 
 branches:
   only:
-    - hexo
+    - main
 env:
- global:
-   - GH_REF: github.com/zytx121/zytx121.github.io.git
+  global:
+    - GH_REF: https://github.com/Deepcity/TL-Blog.github.io.git
