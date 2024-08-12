@@ -7,7 +7,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repo
+      - name: checkout
         uses: actions/checkout@v2
       - name: prepare node env
         uses: actions/setup-node@v1
