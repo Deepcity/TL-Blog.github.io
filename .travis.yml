@@ -1,8 +1,37 @@
 language: node_js
+node_js: stable
 
-node_js: node
-
+# Travis-CI Caching
 cache:
-  npm: true
+  directories:
+    - node_modules
 
-install: npm install
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+before_script:
+ # - npm install -g gulp
+
+
+script:
+  - hexo g
+
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "yourusername"
+  - git config user.email "youremail@xx.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - hexo
+env:
+ global:
+   - GH_REF: github.com/zytx121/zytx121.github.io.git
