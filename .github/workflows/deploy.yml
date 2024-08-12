@@ -18,8 +18,8 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: set github profile
         run: |
-          git config --global user.name 'zshnb'
-          git config --global user.email 'a857681664@gmail.com'
+          git config --global user.name 'Deepcity'
+          git config --global user.email 'f1159472899@163.com'
       - name: hexo generate
         run: |
           npm i -g hexo
@@ -34,5 +34,5 @@ jobs:
           port: 22
           script: |
             cd blog
-            git pull origin gh-pages --rebase
+            git pull origin master --rebase
             sudo nginx -s reload
