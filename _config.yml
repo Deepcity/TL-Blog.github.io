@@ -103,4 +103,4 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/Deepcity/TL-Blog.github.io.git
-  branch: main
+  branch: hexo
