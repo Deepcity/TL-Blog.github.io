@@ -39,6 +39,7 @@ jobs:
           cd themes/next/
           npm ci
 
+      # 缓存node module减轻github压力同时以免爆免费额度
       # 缓存依赖项: https://docs.github.com/cn/actions/using-workflows/caching-dependencies-to-speed-up-workflows
       - name: Cache NPM dependencies
         uses: actions/cache@v2
@@ -53,10 +54,10 @@ jobs:
       # 对githubPage进行部署
       - name: Look Dir List
         run: tree -L 3 -a
-      - name: Clean
-        run: npm run clean
-      - name: Build
-        run: npm run build
+      # - name: Clean
+      #   run: npm run clean
+      # - name: Build
+      #   run: npm run build
       - name: Deploy
         run: npm run deploy
 
