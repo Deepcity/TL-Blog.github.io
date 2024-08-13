@@ -22,7 +22,7 @@ jobs:
 
       - name: Configuration environment
         env:
-          HEXO_DEPLOY_PRI: ${{secrets.ACTIONS_DEPLOY_KEY}}
+          ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
         run: |
           sudo timedatectl set-timezone "Asia/Shanghai"
           mkdir -p ~/.ssh/
@@ -37,7 +37,6 @@ jobs:
           npm ci
           cd themes/next/
           npm ci
-          npm run prod
       - name: Deploy hexo
         run: |
           hexo clean
