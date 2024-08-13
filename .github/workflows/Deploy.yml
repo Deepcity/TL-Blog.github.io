@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-
+      # 配置环境，即配置用于访问读写github仓库的id_rsa
       - name: Configuration environment
         env:
           ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
@@ -40,8 +40,7 @@ jobs:
       # 对githubPage进行部署
       - name: Deploy hexo
         run: |
-          hexo clean
-          hexo g && hexo d
+          npm run deploy
       # 对服务器进行拉取
       - name: ssh remove server
         uses: appleboy/ssh-action@v1.0.0
