@@ -35,8 +35,7 @@ jobs:
         run: |
           npm i -g hexo-cli
           npm ci
-          cd themes/next/
-          npm ci
+          # 这里可能需要对主题进行npm in
       # 对githubPage进行部署
       - name: Deploy hexo
         run: |
