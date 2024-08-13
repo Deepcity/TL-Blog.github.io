@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.20.4]
+        node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -20,7 +20,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      # 配置环境，即配置用于访问读写github仓库的id_rsa
       - name: Configuration environment
         env:
           ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
@@ -38,30 +37,12 @@ jobs:
           npm ci
           cd themes/next/
           npm ci
-
-      # 缓存node module减轻github压力同时以免爆免费额度
-      # 缓存依赖项: https://docs.github.com/cn/actions/using-workflows/caching-dependencies-to-speed-up-workflows
-      - name: Cache NPM dependencies
-        uses: actions/cache@v2
-        with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          # path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
-
       # 对githubPage进行部署
-      - name: Look Dir List
-        run: tree -L 3 -a
-      # - name: Clean
-      #   run: npm run clean
-      # - name: Build
-      #   run: npm run build
-      - name: Deploy
-        run: npm run deploy
-
-      # 服务器进行拉取
+      - name: Deploy hexo
+        run: |
+          hexo clean
+          hexo d -g
+      # 对服务器进行拉取
       - name: ssh remove server
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -70,6 +51,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd /usr/local/hexo
+            cd blog
+            git add .
+            git reset --hard HEAD
             git pull origin gh-pages
-            nginx -s reload
+            sudo nginx -s reload
