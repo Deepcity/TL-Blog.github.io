@@ -103,4 +103,4 @@ theme: next
 deploy:
   type: git
   branch: gh-pages
-  repo: https://github.com/Deepcity/TL-Blog.github.io.git
+  repo: git@github.com:Deepcity/deepcity.github.io.git
