@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+
       # 配置环境，即配置用于访问读写github仓库的id_rsa
       - name: Configuration environment
         env:
@@ -37,11 +38,29 @@ jobs:
           npm ci
           cd themes/next/
           npm ci
+
+      # 缓存依赖项: https://docs.github.com/cn/actions/using-workflows/caching-dependencies-to-speed-up-workflows
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          # path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+
       # 对githubPage进行部署
-      - name: Deploy hexo
-        run: |
-          npm run deploy
-      # 对服务器进行拉取
+      - name: Look Dir List
+        run: tree -L 3 -a
+      - name: Clean
+        run: npm run clean
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        run: npm run deploy
+
+      # 服务器进行拉取
       - name: ssh remove server
         uses: appleboy/ssh-action@v1.0.0
         with:
