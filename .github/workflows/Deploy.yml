@@ -31,7 +31,7 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.name "Deepcity"
           git config --global user.email "f1159472899@163.com"
-      # 暂不清楚为何导致git服务器部署时效果与本地不同，表现为文件消失
+      # 暂不清楚为何导致git服务器部署时效果与本地不同，表现为文件消失，功能暂时由脚本代替
       # - name: Install dependencies
       #   run: |
       #     npm i -g hexo-cli
