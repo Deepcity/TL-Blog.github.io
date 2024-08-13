@@ -40,7 +40,6 @@ jobs:
       # 对githubPage进行部署
       - name: Deploy hexo
         run: |
-          hexo clean
           hexo d -g
       # 对服务器进行拉取
       - name: ssh remove server
