@@ -37,7 +37,6 @@ jobs:
           npm ci
           cd themes/next/
           npm ci
-          npm run prod
       - name: Deploy hexo
         run: |
           hexo clean
