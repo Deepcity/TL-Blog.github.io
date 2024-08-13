@@ -52,5 +52,5 @@ jobs:
           port: 22
           script: |
             cd blog
-            git pull origin master --rebase
+            git pull origin gh-page --rebase
             sudo nginx -s reload
