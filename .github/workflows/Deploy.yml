@@ -51,6 +51,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd blog
-            git pull origin gh-page --rebase
-            sudo nginx -s reload
+            cd /usr/local/hexo
+            git pull origin gh-pages
+            nginx -s reload
