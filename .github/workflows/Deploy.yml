@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [18.20.4]
 
     steps:
       - uses: actions/checkout@v4
@@ -40,6 +40,8 @@ jobs:
       # 对githubPage进行部署
       - name: Deploy hexo
         run: |
+          hexo clean 
+          hexo g
           npm run deploy
       # 对服务器进行拉取
       - name: ssh remove server
