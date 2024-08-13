@@ -37,7 +37,20 @@ jobs:
           npm ci
           cd themes/next/
           npm ci
+      # 对githubPage进行部署
       - name: Deploy hexo
         run: |
           hexo clean
           hexo d -g
+      # 对服务器进行拉取
+      - name: ssh remove server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd blog
+            git pull origin master --rebase
+            sudo nginx -s reload
