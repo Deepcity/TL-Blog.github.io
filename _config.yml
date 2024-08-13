@@ -102,5 +102,5 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  branch: gh-page
+  branch: gh-pages
   repo: https://github.com/Deepcity/deepcity.github.io
