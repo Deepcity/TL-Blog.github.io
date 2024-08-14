@@ -50,6 +50,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            proxy_on
             cd /usr/local/hexo/
             git add .
             git reset --hard HEAD
