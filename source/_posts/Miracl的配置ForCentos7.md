@@ -11,6 +11,8 @@ Miracl is Multiprecision Integer and Rational Arithmetic Cryptographic Library �
 
 Miracl 是多精度整数和有理数算术加密库（MIRACL Crypto SDK），是一个 C 软件库，被开发人员广泛视为椭圆曲线加密 (ECC) 的黄金标准开源 SDK。也可在c++环境下通过对c库的
 
+<!--more-->
+
 ```cpp
 extern "C"
 {

@@ -11,6 +11,8 @@ categories:
 
 ​	Typora是我一直在使用的markdown编辑器，对比起其他的markdown编辑器来说，==Obsidian==虽然有更加具有逻辑性的文档之间的双向链接和git式的设定，==Vscode==，==Sublime==则是Markdown插件构成的markdown编辑器，Typora更加纯粹和统一。具体表现在，它的使用逻辑非常简洁，仅仅只是文档编辑器，除了markdown的即时渲染之外，并没有过多独特的特性，在编辑上的极致优化使得它受众广泛。
 
+<!--more-->
+
 ## Typora的Markdown语法
 
 ​	Typora中的Markdown语法分为严格和非严格两种语法格式，这里建议使用严格语法格式，提高文档的可移植性并且养成良好的习惯。

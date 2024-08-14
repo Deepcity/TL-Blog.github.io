@@ -11,6 +11,8 @@ categories:
 
 RSA（Rivest–Shamir–Adleman）是一种公钥密码系统，是最古老且广泛用于安全数据传输的系统之一。它是一种非对称公钥-私钥密码系统。
 
+<!--more-->
+
 ## 基础数论知识纲要
 
 传送门：[MH3210 - NTU - Number Theory - Studocu](https://www.studocu.com/sg/course/nanyang-technological-university/number-theory/3031934)

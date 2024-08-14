@@ -22,6 +22,8 @@ categories:
 
 [Problem - D - Codeforces](https://codeforces.com/contest/1969/problem/D)
 
+<!--more-->
+
 ## 题解：
 
 注意到，Bob在选择免费的时候显然是直接免费最大的$$b_i$$，于是，Alice总是希望选出的物品中价值最高的物品的成本尽可能的小，而剩下的物品的$$b_i - a_i$$尽可能的大。

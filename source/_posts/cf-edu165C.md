@@ -13,6 +13,8 @@ categories:
 
 [Problem - C - Codeforces](https://codeforces.com/contest/1969/problem/C)
 
+<!--more-->
+
 ## 题解：
 
 教育场的题，特别是c题总是相对简单（ps:也可能是因为少怪题和近期写的少了的缘故。）但是总是很有意义。考虑这一题。显然容易注意到k的数据范围是小于10的（可以暴搜:) 假的！），很容易想到用dp做法可以解。
