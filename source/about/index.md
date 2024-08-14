@@ -14,4 +14,6 @@ date: 2024-08-14 15:06:43
 
 ## 友链
 
-https://blog.braumace.cn/ByteLighting/
+{% linkgrid %}
+BraumAce | https://blog.braumace.cn/ByteLighting/ | 一个后端开发者 | https://blog.braumace.cn/ByteLighting/BraumAce.jpg
+{% endlinkgrid %}
