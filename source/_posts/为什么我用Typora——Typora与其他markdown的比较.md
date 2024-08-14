@@ -1,7 +1,7 @@
 ---
 title: 为什么我用Typora——Typora与其他markdown的比较
 date: 2024-08-13 15:20:34
-tags: Typora, Markdown, 编辑器, 随笔
+tags: [Typora, Markdown, 编辑器, 随笔]
 ---
 ## Typora
 
