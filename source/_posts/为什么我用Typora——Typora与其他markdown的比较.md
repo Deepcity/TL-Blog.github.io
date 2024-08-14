@@ -1,7 +1,11 @@
 ---
 title: 为什么我用Typora——Typora与其他markdown的比较
-date: 2024-08-13 15:20:34
-tags: [Typora, Markdown, 编辑器, 随笔]
+date: 2023-08-13 15:20:34
+tags: [Typora, Markdown, 随笔]
+categories:
+   - 软件
+   - 编辑器
+   - Markdown
 ---
 ## Typora
 
@@ -16,6 +20,8 @@ tags: [Typora, Markdown, 编辑器, 随笔]
 ​	因此，如果你有一份md文本，在release时tag自己的环境是一个不错的选择。
 
 > ps: 根据互联网信息，Markdown语法截至24/7/21仍然未完成统一，这是一片未被规范化的蓝海，希望尽快规范化
+
+<!--more-->
 
 ### 代码块语法
 

@@ -95,6 +95,40 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+
+### 统计字数与阅读市场
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  wpm: 275
+  suffix: "mins."
+
+### 推荐热门文章
+related_posts:
+    icon: fa fa-signs-post
+    enabled: true
+    enable_env_name: prod
+    filter_threshold: 0.3
+    related_count: 3
+    weight:
+        title: 0.05
+        description: 0.05
+        keywords: 0.01
+        tags: 0.005
+        categories: 0.005
+        text: 1
+    stemmers:
+      - en
+      - ru
+    reserved:
+      - asp.net
+      - vs.net
+      - ado.net
+      - .net
+
 ## Themes: https://hexo.io/themes/
 theme: next
 
