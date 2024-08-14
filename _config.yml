@@ -8,7 +8,9 @@ subtitle: '共享 开放 包容 改进'
 description: '这是一个个人blog站点，记录技术与知识文章'
 keywords: ThreeLanes blog techology
 author: ThreeLanes
-language: zh-CN
+language: 
+  - zh-CN
+  - en
 timezone: ''
 
 # URL
