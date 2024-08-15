@@ -14,6 +14,8 @@ categories:
 
 [Problem - F - Codeforces](https://codeforces.com/gym/105161/problem/F)
 
+<!--more-->
+
 ### 题意：
 
 您正在从云存储下载某些内容，但下载速度却令人大失所望。盯着下载速度监视器会让你感觉舒服一些。

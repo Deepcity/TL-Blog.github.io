@@ -12,6 +12,8 @@ categories:
 
 ### I.[Cyclic Apple Strings](https://codeforces.com/gym/105143/problem/I)
 
+<!--more-->
+
 计算第一个1后的0的段数
 
 ```cpp

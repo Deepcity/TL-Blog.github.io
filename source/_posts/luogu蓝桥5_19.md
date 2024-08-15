@@ -12,6 +12,8 @@ categories:
 
 [P10509 停车场 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)](https://www.luogu.com.cn/problem/P10509?contestId=174155)
 
+<!--more-->
+
 ### 题意
 
 你有一片空地。这片空地可以视作一个一个 𝑛×𝑛 的正方形。空地外一圈为墙壁，你无法拆除它们。

@@ -9,6 +9,8 @@ categories:
 
 ## [D-幻兽帕鲁_牛客小白月赛93 (nowcoder.com)](https://ac.nowcoder.com/acm/contest/82401/D)
 
+<!--more-->
+
 ### 题意
 
 在幻兽帕鲁中，不同的帕鲁能干不同的工作，现在我们要对帕鲁进行分类以便他们能够更好的进行压榨。  
