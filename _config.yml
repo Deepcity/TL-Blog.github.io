@@ -142,3 +142,11 @@ deploy:
   type: git
   branch: gh-pages
   repo: git@github.com:Deepcity/deepcity.github.io.git
+
+# Search Serives
+## Docs https://github.com/theme-next/hexo-generator-searchdb
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
