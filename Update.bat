@@ -6,4 +6,4 @@ if not defined FNM_AUTORUN_GUARD (
 	set "FNM_AUTORUN_GUARD=AutorunGuard"
 	FOR /f "tokens=*" %%z IN ('fnm env --use-on-cd') DO CALL %%z
 )
-hexo clean && hexo g && hexo d && git add . && git commit -m "修复评论登录重定向问题" && git push origin main
+hexo g && hexo d && git add . && git commit -m "杂项更新" && git push origin main
