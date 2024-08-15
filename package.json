@@ -25,6 +25,7 @@
     "hexo-next-tag": "github:theme-next/hexo-next-tag",
     "hexo-related-posts": "^1.5.2",
     "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-kramed": "^0.1.4",
     "hexo-renderer-pandoc": "^0.4.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
