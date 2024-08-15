@@ -6,7 +6,9 @@ zh-CN:
       # the translation you prefer
       author: 本文博主
     comments:
-      disqus: 评论
+      comments: 评论
+      write: 编写
+      preview: 预览
 en:
   menu:
     schedule: Calendar
