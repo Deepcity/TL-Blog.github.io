@@ -1020,13 +1020,13 @@ waline:
   # 浏览量计数，注意：您不应同时启用 `waline.pageview` 和 `leancloud_visitors`。
   pageview: false
   # 自定义表情符号
-  # emoji:
-  #   - https://unpkg.com/@waline/emojis@1.0.1/weibo
-  #   - https://unpkg.com/@waline/emojis@1.0.1/alus
-  #   - https://unpkg.com/@waline/emojis@1.0.1/bilibili
-  #   - https://unpkg.com/@waline/emojis@1.0.1/qq
-  #   - https://unpkg.com/@waline/emojis@1.0.1/tieba
-  #   - https://unpkg.com/@waline/emojis@1.0.1/tw-emoji
+  emoji:
+    - https://unpkg.com/@waline/emojis@1.0.1/weibo
+    - https://unpkg.com/@waline/emojis@1.0.1/alus
+    - https://unpkg.com/@waline/emojis@1.0.1/bilibili
+    - https://unpkg.com/@waline/emojis@1.0.1/qq
+    - https://unpkg.com/@waline/emojis@1.0.1/tieba
+    - https://unpkg.com/@waline/emojis@1.0.1/tw-emoji
   # 评论信息，有效元是昵称，邮件和链接
   # meta:
   #   - nick
