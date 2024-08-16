@@ -24,6 +24,7 @@
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-index-i18n": "^0.2.1",
     "hexo-generator-searchdb": "^1.4.1",
+    "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-next-darkmode": "^0.1.11",
     "hexo-next-tag": "github:theme-next/hexo-next-tag",
