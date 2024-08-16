@@ -10,6 +10,8 @@ categories:
 ---
 [MindSpore](https://www.mindspore.cn/tutorials/zh-CN/r2.3.0rc2/beginner/quick_start.html)
 
+<!--more-->
+
 ## MindSpore 数据处理
 
 ### download

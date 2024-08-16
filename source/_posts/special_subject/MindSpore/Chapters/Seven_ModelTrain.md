@@ -14,6 +14,8 @@ categories:
 
 [MindSpore](https://www.mindspore.cn/tutorials/zh-CN/r2.2/beginner/train.html)
 
+<!--more-->
+
 ### 四个步骤
 
 1. 构建数据集。

@@ -16,6 +16,8 @@ categories:
 >
 > https://github.com/exacity/deeplearningbook-chinese
 
+<!--more-->
+
 ##  感知机（Perceptron）
 
 ![img](https://s2.loli.net/2024/06/10/bkVr3Lymea1OAnw.png)

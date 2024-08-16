@@ -64,14 +64,10 @@
   {%- endif %}
 
   {%- if theme.busuanzi_count.total_views %}
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="{{ theme.busuanzi_count.total_views_icon }}"></i>
-      </span>
-      <span class="site-pv" title="{{ __('footer.total_views') }}">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
+    <div style="font-size: 0.85rem">
+    <span id="timeDate">载入天数...</span>
+    <span id="times">载入时分秒...</span>
+    <script src="/runtime.js"></script>
   {%- endif %}
 </div>
 {%- endif %}
@@ -82,5 +78,7 @@
     {{- __('footer.powered', next_url('https://hexo.io', 'Hexo') + ' & ' + next_url(next_site, 'NexT.' + theme.scheme)) }}
   </div>
 {%- endif %}
+
+
 
 {{- next_inject('footer') }}

@@ -14,6 +14,8 @@ categories:
 
 详情请见MNIST数据官方网站：[MNIST handwritten digit database, Yann LeCun, Corinna Cortes and Chris Burges](http://yann.lecun.com/exdb/mnist/)
 
+<!--more-->
+
 下面是简略介绍
 
 |   数据集   |      MNIST中的文件名       |                          下载地址                           |  文件大小   |

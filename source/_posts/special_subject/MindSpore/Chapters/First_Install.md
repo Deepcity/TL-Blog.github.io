@@ -17,6 +17,8 @@ categories:
 1. 原有的系统为Ubuntu22.04因此下载Ubuntu18.04 镜像光盘文件
    -  通过cat /proc/version文件查看当前的系统版本
 
+<!--more-->
+
 ![image-20240604174857507](https://s2.loli.net/2024/06/04/9tNsqxUkrJFHQOc.png)
 
 2. 下载Ubuntu18.04系统光盘https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso

@@ -12,6 +12,8 @@ categories:
 
 Transformer是一种神经网络结构，有Vaswani等人在2017年的论文“Attention Is All You Need”中提出，用于处理机器翻译、语言建模和文本生成登自然语言处理任务。
 
+<!--more-->
+
 Transformer与传统NLP特征提取类模型的区别主要在以下两点。
 
 - Transformer是一个纯基于注意力机制的结构，并将自**注意力机制**和**多头注意力机制**的概念运用到模型中；

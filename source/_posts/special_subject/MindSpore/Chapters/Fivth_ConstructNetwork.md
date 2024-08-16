@@ -14,6 +14,8 @@ categories:
 
 下面我们将构建一个用于Mnist数据集分类的神经网络模型。
 
+<!--more-->
+
 ### 定义模型类
 
 当我们定义神经网络时，可以继承`nn.Cell`类，在`__init__`方法中进行子Cell的实例化和状态管理，在`construct`方法中实现Tensor操作。
