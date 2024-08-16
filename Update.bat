@@ -6,4 +6,4 @@ if not defined FNM_AUTORUN_GUARD (
 	set "FNM_AUTORUN_GUARD=AutorunGuard"
 	FOR /f "tokens=*" %%z IN ('fnm env --use-on-cd') DO CALL %%z
 )
-hexo g && hexo d && git add . && git commit -m "站点地图更新" && git push origin main
+hexo g && hexo d && git add . && git commit -m "图标问题修复" && git push origin main
