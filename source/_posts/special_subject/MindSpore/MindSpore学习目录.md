@@ -15,18 +15,18 @@ categories:
 
 ## 初级教程
 
-[前置数学](../Chapters/Concept.md)
+[前置数学](../Chapters/Concept/index.html)
 
-[第一章 Ubuntu以及Windows安装MindSpore](../Chapters\First_Install.md)
+[第一章 Ubuntu以及Windows安装MindSpore](../Chapters/First_Install/index.html)
 
-[第二章 尝试使用MindSpore](../Chapters/Second_TryMindSpore.md)
+[第二章 尝试使用MindSpore](../Chapters/Second_TryMindSpore/index.html)
 
-[第三章 张量](../Chapters/Third_Tensor.md)
+[第三章 张量](../Chapters/Third_Tensor/index.html)
 
-[第四章 数据集](../Chapters/Fourth_DataSet.md)
+[第四章 数据集](../Chapters/Fourth_DataSet/index.html)
 
-[第五章 网格构建](../Chapters/Fivth_ConstructNetwork.md)
+[第五章 网格构建](../Chapters/Fivth_ConstructNetwork/index.html)
 
-[第六章 函数式自动微分](../Chapters/Sixth_FunctionAutoDifferentalCalc.md)
+[第六章 函数式自动微分](../Chapters/Sixth_FunctionAutoDifferentalCalc/index.html)
 
-[第七章 模型训练](../Chapters//Seven_ModelTrain.md)
+[第七章 模型训练](../Chapters/Seven_ModelTrain/index.html)

@@ -103,6 +103,7 @@ menu:
   schedule: /schedule/ || fa fa-calendar
   sitemap: /sitemap.xml || fa fa-sitemap
   commonweal: /404/ || fa fa-heartbeat
+  monitor: https://uptime.keboe.cn/status/test || fa fa-computer
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -202,7 +203,7 @@ toc:
 # ---------------------------------------------------------------
 
 # Show multilingual switcher in footer.
-language_switcher: false
+language_switcher: true
 
 footer:
   # Specify the year when the site was setup. If not defined, current year will be used.
@@ -347,7 +348,7 @@ calendar:
 
 # Preload styles and preconnect CDN for fonts and plugins.
 # For more information: https://www.w3.org/TR/resource-hints/#preconnect
-preconnect: false
+preconnect: true
 
 # Set the text alignment in posts / pages.
 text_align:
@@ -356,7 +357,7 @@ text_align:
   mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Browser header panel color.
 theme_color:
@@ -570,12 +571,12 @@ math:
   # Default (false) will load mathjax / katex script on demand.
   # That is it only render those page which has `mathjax: true` in front-matter.
   # If you set it to true, it will load mathjax / katex script EVERY PAGE.
-  every_page: false
+  every_page: true
 
   mathjax:
     enable: true
     # Available values: none | ams | all
-    tags: none
+    tags: ams
 
   katex:
     enable: false
@@ -896,7 +897,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true

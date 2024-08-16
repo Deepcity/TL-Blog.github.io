@@ -9,6 +9,8 @@ zh-CN:
       comments: 评论
       write: 编写
       preview: 预览
+  menu:
+    monitor: 监控器
 en:
   menu:
     schedule: Calendar
