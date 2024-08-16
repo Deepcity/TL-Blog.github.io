@@ -11,6 +11,7 @@ zh-CN:
       preview: 预览
   menu:
     monitor: 监控器
+    categories: 日志
 en:
   menu:
     schedule: Calendar

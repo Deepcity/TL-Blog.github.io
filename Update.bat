@@ -6,4 +6,4 @@ if not defined FNM_AUTORUN_GUARD (
 	set "FNM_AUTORUN_GUARD=AutorunGuard"
 	FOR /f "tokens=*" %%z IN ('fnm env --use-on-cd') DO CALL %%z
 )
-hexo g && hexo d && git add . && git commit -m "为文章打截断标签" && git push origin main
+hexo g && hexo d && git add . && git commit -m "修复了已知的翻译问题" && git push origin main
