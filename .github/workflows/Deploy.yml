@@ -55,4 +55,3 @@ jobs:
             git add .
             git reset --hard HEAD
             git pull origin gh-pages
-            nginx -s reload
