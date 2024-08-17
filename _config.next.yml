@@ -333,7 +333,6 @@ calendar:
   calendar_id: f1159472899@gmail.com # Your Google account E-Mail
   api_key: 
     - AIzaSyCbh-xKJfVKvmPbOjXdfoADG7wz6jinU1o
-    - 
   orderBy: startTime
   showLocation: false
   offsetMax: 72 # Time Range
