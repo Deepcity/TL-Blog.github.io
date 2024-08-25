@@ -91,7 +91,7 @@ LVM是扩容时所使用的空间的格式，是Linux所特有的空间的处理
 
 ## 掉网络问题
 
-见 [Linux网络设置.md](Linux网络设置/article.html) 中异常处理一章
+见 [Linux网络设置.md](../Linux网络设置/article.html) 中异常处理一章
 
 ## 经验
 

@@ -156,7 +156,7 @@ Environment="HTTPS_PROXY=http://IP:Port/"
 Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
 ```
 
-在这里，我是用的clash-for-linux的IP为127.0.0.1，Port为7890，可以通过 [Linux网络设置.md](Linux网络设置.md)设置。 
+在这里，我是用的clash-for-linux的IP为127.0.0.1，Port为7890，可以通过 [Linux网络设置.md](../Linux网络设置.md)设置。 
 
 最后重启他俩即可
 
