@@ -59,7 +59,7 @@ docker run -d -p [HostIP]:[HostPort]:[DockerPort] --name [ContainerName] [Softwa
 
 启动一个特定的容器并将docker的某一个开放端口映射到主机上，其中-d使得容器的输出并不同步到主机上
 
-### 通过本地Image仓库启动容器
+#### 通过本地Image仓库启动容器
 
 ```
 docker run -d -p [HostIP]:[HostPort]:[DockerPort] <image_name>:<tag>
