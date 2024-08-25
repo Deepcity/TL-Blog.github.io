@@ -102,7 +102,7 @@ docker commit sharelatex sharelatex/sharelatex:[version]-with-texlive-full
 echo [version]-with-texlive-full > config/version
 ```
 
-
+注意在编写中文文档时需要调整至XeLaTex，并且调用Ctex包
 
 ## 参考资料
 
