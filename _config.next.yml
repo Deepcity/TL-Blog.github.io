@@ -227,14 +227,14 @@ footer:
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, https://beian.mps.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 鄂ICP备2024062830号
     # The digit in the num of gongan beian.
-    gongan_id:
+    gongan_id: 2024062830
     # The full num of gongan beian.
-    gongan_num:
+    gongan_num: 鄂公网安备2024062830号
     # The icon for gongan beian. Login and See: https://beian.mps.gov.cn/web/business/businessHome/website
-    gongan_icon_url:
+    gongan_icon_url: /images/beian.png
 
 
 # ---------------------------------------------------------------
