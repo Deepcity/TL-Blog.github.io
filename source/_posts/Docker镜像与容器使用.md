@@ -18,6 +18,8 @@ tags: [Docker]
 5. `docker container/image rm [container_id]/[image_id]`移除镜像或容器。
 6. `docker commit sharelatex sharelatex:version_tag` 提交容器为镜像
 
+<!--more-->
+
 ## Image与Container的关系
 
 Container可以commit为Image
