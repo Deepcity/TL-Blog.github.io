@@ -4,7 +4,7 @@ date: 2024-08-25 17:22:58
 categories: 
 - 软件
 - latex
-- overleaf
+- package
 tags: [latex, overleaf]
 ---
 
