@@ -1,11 +1,13 @@
+---
 title: Xiaobai93D-E
 date: 2024-08-14 19:46:31
 tags: [newcoder]
 categories: 
-	- 比赛
-	- 日常赛
-	- newcoder
+- 比赛
+- 日常赛
+- newcoder
 ---
+# 小白93
 
 ## [D-幻兽帕鲁_牛客小白月赛93 (nowcoder.com)](https://ac.nowcoder.com/acm/contest/82401/D)
 

@@ -3,9 +3,9 @@ title: 2024武汉ICPC邀请赛VP
 date: 2024-08-14 19:46:31
 tags: [icpc]
 categories: 
-	- 比赛
-	- 模拟赛
-	- icpc邀请赛
+- 比赛
+- 模拟赛
+- icpc邀请赛
 ---
 
 ## 武汉邀请赛VP

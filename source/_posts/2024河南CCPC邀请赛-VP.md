@@ -3,9 +3,9 @@ title: 2024河南CCPC邀请赛-VP
 date: 2024-08-14 19:46:31
 tags: [ccpc]
 categories: 
-	- 比赛
-	- 模拟赛
-	- ccpc邀请赛
+- 比赛
+- 模拟赛
+- ccpc邀请赛
 ---
 
 ## 河南CCPC-VP

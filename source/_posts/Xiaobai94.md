@@ -1,10 +1,11 @@
+---
 title: Xiaobai94
 date: 2024-08-14 19:46:31
 tags: [newcoder]
 categories: 
-	- 比赛
-	- 日常赛
-	- newcoder
+- 比赛
+- 日常赛
+- newcoder
 ---
 
 ## [B-小苯的好数组_牛客小白月赛94 (nowcoder.com)](https://ac.nowcoder.com/acm/contest/82957/B)

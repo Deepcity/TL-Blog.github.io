@@ -37,7 +37,7 @@ V2ray、ClashForWindows等
 
 ### Linux平台
 
-推荐clash-for-windows，一个个人自用的备份库
+推荐clash-for-linux，一个个人自用的备份库
 
 [Elegycloud/clash-for-linux-backup: 基于Clash Core 制作的Clash For Linux备份仓库 A Clash For Linux Backup Warehouse Based on Clash Core (github.com)](https://github.com/Elegycloud/clash-for-linux-backup)
 
