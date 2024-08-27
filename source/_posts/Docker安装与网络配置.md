@@ -139,7 +139,7 @@ sudo yum remove docker \
 
 ## Docker的网络代理
 
-![docker与daemon在代理中的关系](https://i-blog.csdnimg.cn/blog_migrate/53472fd549666b7817c31f80e4f2413b.png)
+![docker与daemon在代理中的关系](https://s2.loli.net/2024/08/27/nPUjY3yCtleLosD.png)
 
 ![daemon与网络的关系](https://s2.loli.net/2024/08/24/vYtQrRgiSsyd14E.png)
 
