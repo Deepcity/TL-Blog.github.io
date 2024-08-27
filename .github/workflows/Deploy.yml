@@ -52,6 +52,6 @@ jobs:
           script: |
             proxy_on
             cd /usr/local/hexo/
-            git add .
-            git reset --hard HEAD
-            git pull origin gh-pages
+            git fetch origin
+            git reset --hard origin/gh-pages
+            git clean -fd
