@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="EzvkH8RisfPPs4FDg8TcP3u6FtkMev8TBOJLPE7OEN4">
+  <meta name="msvalidate.01" content="80DCDC7CC1EB61C078DE11A21469B857">
+  <meta name="baidu-site-verification" content="codeva-zBnxVrCEgy">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=仿宋:300,300italic,400,400italic,700,700italic%7CLobster+Two:300,300italic,400,400italic,700,700italic%7Cfira+code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"deepcity.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="题意： 给你一个数组[𝑝1,𝑝2,…,𝑝𝑛] ，其中所有元素都是不同的。 你可以对它执行几个(可能是零)操作。在一个操作中，你可以从 p 中选择一个连续的子段，然后从该子段中删除所有元素，除该子段中最小的元素。例如，如果选择p &#x3D; [3, 1, 4, 7, 5, 2, 6]，并选择从，并选择从3元素到−𝑟𝑑元素到6元素的子段，那么得到的数组就是−𝑡ℎ元素的子段，那么得到的数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="状态转移习题">
+<meta property="og:url" content="https://deepcity.github.io/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html">
+<meta property="og:site_name" content="ThreeLanes&#39; Site">
+<meta property="og:description" content="题意： 给你一个数组[𝑝1,𝑝2,…,𝑝𝑛] ，其中所有元素都是不同的。 你可以对它执行几个(可能是零)操作。在一个操作中，你可以从 p 中选择一个连续的子段，然后从该子段中删除所有元素，除该子段中最小的元素。例如，如果选择p &#x3D; [3, 1, 4, 7, 5, 2, 6]，并选择从，并选择从3元素到−𝑟𝑑元素到6元素的子段，那么得到的数组就是−𝑡ℎ元素的子段，那么得到的数">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-14T11:32:13.000Z">
+<meta property="article:modified_time" content="2024-08-27T08:32:24.888Z">
+<meta property="article:author" content="ThreeLanes">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="状态转移">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://deepcity.github.io/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://deepcity.github.io/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html","path":"2024/状态转移习题/article.html","title":"状态转移习题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>状态转移习题 | ThreeLanes' Site</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="https://vercel.keboe.cn/">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="ThreeLanes' Site" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ThreeLanes' Site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">共享 开放 包容 改进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li><li class="menu-item menu-item-monitor"><span class="exturl" data-url="aHR0cHM6Ly91cHRpbWUua2Vib2UuY24vc3RhdHVzL3Rlc3Q="><i class="fa fa-computer fa-fw"></i>监控器</span></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text">题意：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">题解：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">3.</span> <span class="nav-text">题意：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="nav-number">4.</span> <span class="nav-text">题解：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">5.</span> <span class="nav-text">题意：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="nav-number">6.</span> <span class="nav-text">题解：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-3"><span class="nav-number">7.</span> <span class="nav-text">题意：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="nav-number">8.</span> <span class="nav-text">题解：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ThreeLanes</p>
+  <div class="site-description" itemprop="description">这是一个个人blog站点，记录技术与知识文章</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0RlZXBjaXR5" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Deepcity"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmYxMTU5NDcyODk5QDE2My5jb20=" title="E-Mail → mailto:f1159472899@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly94LmNvbS9EZWVwQ2l0eTc2NDYzNw==" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;DeepCity764637"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="c2t5cGU6R2FuZyBTdW4/Y2FsbHxjaGF0" title="Skype → skype:Gang Sun?call|chat"><i class="fab fa-skype fa-fw"></i>Skype</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmtlYm9lLmNuL2ltYWdlcy9xcS1jb250YWN0LnBuZw==" title="QQ → https:&#x2F;&#x2F;blog.keboe.cn&#x2F;images&#x2F;qq-contact.png"><i class="fab fa-qq fa-fw"></i>QQ</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://deepcity.github.io/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ThreeLanes">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ThreeLanes' Site">
+      <meta itemprop="description" content="这是一个个人blog站点，记录技术与知识文章">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="状态转移习题 | ThreeLanes' Site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          状态转移习题<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL0RlZXBjaXR5L2RlZXBjaXR5LmdpdGh1Yi5pby90cmVlL21haW4vc291cmNlL19wb3N0cy/nirbmgIHovaznp7vkuaDpopgubWQ=" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-14 19:32:13" itemprop="dateCreated datePublished" datetime="2024-08-14T19:32:13+08:00">2024-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-08-27 16:32:24" itemprop="dateModified" datetime="2024-08-27T16:32:24+08:00">2024-08-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB/" itemprop="url" rel="index"><span itemprop="name">状态转移</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>10 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="题意">题意：</h1>
+<p>给你一个数组[𝑝1,𝑝2,…,𝑝𝑛] ，其中所有元素都是不同的。</p>
+<p>你可以对它执行几个(可能是零)操作。在一个操作中，你可以从 p
+中选择一个<strong>连续的子段</strong>，然后从该子段中删除<strong>所有</strong>元素，<strong>除</strong>该子段中最小的元素。例如，如果选择p
+= [3, 1, 4, 7, 5, 2,
+6]，并选择从，并选择从3元素到−𝑟𝑑元素到6元素的子段，那么得到的数组就是−𝑡ℎ元素的子段，那么得到的数组就是[3,
+1, 2, 6]。</p>
+<p>如果数组
+a可以从可以从p中通过上述几种也许是零种操作得到，那么这个数组中通过上述几种(也许是零种)操作得到，那么这个数组a
+就叫做可达数组。计算可达数组的个数，并打印出它的模数 998244353。</p>
+<h1 id="题解">题解：</h1>
+<p>根据题目答案数据范围，很容易想到通过区间修改暴力答案是不可行的。于是转向dp想法，一个简单的构型是，对于每个i结尾的结果数组计算贡献值。思考状态转移，需要计算如何在保留
+𝑎𝑖 的情况下的贡献值。</p>
+<p>考虑操作对于保留最小值的设定，该操作具有结合律，可以想到， 𝑎𝑖
+是后缀操作区间（如进行[n-1,n],[n-3.n-2]的操作等同于操作后缀[n-3,n]）最小值一定成立。则状态转移为其中dp(i)+=dp(j)(其中a[j]&lt;a[i])另外一种情况则是，不对i进行操作。考虑上一个比a[i]小的数为<span
+class="math inline">\(l*{a_i}\)</span>下标为，则小于且大于下标为j，则小于j且大于l<em>{a</em>j}的下标的下标均无法转移至，显然的下标k的下标idx均无法转移至i，显然l<em>{a</em>i}是无法通过操作区间中比它大的数移除的，这是可以推广的，即对任意下标小于的下标如果其不等于是无法通过操作区间中比它大的数移除的，这是可以推广的，即对任意下标小于j的下标x如果其不等于<span
+class="math inline">\(l*{a_x}\)</span>则无法转移到i。</p>
+<p>总结状态转移为<span class="math inline">\(f*i =
+\sum*{k={l*{a_i}+1}}^{i-1} f_k +
+\sum*{k=l^x(l*{a_i})}^{k&gt;0}f*{k}\)</span></p>
+<p>前缀和处理即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">	void slove()&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)cin&gt;&gt;a[i];</span><br><span class="line"></span><br><span class="line">    s[top] = &#123;-1,-1&#125;;</span><br><span class="line">    for(int i = 1;i &lt;= n;i++) &#123;</span><br><span class="line">        while(top &amp;&amp; s[top].x &gt; a[i]) top--;</span><br><span class="line">        l[i] = s[top].y;</span><br><span class="line">        s[++top] = &#123;a[i],i&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // for(int i=1;i&lt;=n;i++) cout&lt;&lt;l[i]&lt;&lt;&#x27; &#x27;;</span><br><span class="line">    // cout&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">    for(int i=0;i&lt;=n;i++) pre1[i] = pre2[i] = 0;</span><br><span class="line"></span><br><span class="line">    f[0] = 1;</span><br><span class="line">    pre1[0] = 1;</span><br><span class="line">    for(int i=1;i&lt;=n;i++) &#123;</span><br><span class="line">        if(l[i]!=-1) pre2[i] = pre2[l[i]] + f[l[i]] % MOD;</span><br><span class="line">        int t = l[i] == -1 ? 0: pre1[l[i]];</span><br><span class="line">        f[i] = (pre1[i-1] - t) % MOD ;</span><br><span class="line">        // cout&lt;&lt;(pre1[i-1] - t)&lt;&lt;&#x27; &#x27;;</span><br><span class="line">        f[i] += pre2[i];</span><br><span class="line"></span><br><span class="line">        pre1[i] = pre1[i-1] + f[i] % MOD;</span><br><span class="line">        // cout&lt;&lt;i&lt;&lt;&#x27; &#x27;&lt;&lt;pre1[i]&lt;&lt;&#x27; &#x27;&lt;&lt;pre2[i]&lt;&lt;&#x27; &#x27;&lt;&lt;f[i]&lt;&lt;nline;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int mi = 1e18,ans = 0;</span><br><span class="line">    for(int i=n; i&gt;=1; i--) &#123;</span><br><span class="line">        mi = min(mi,a[i]);</span><br><span class="line">        if(mi==a[i]) &#123;</span><br><span class="line">            ans = (ans + f[i]) % MOD;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h1 id="题意-1">题意：</h1>
+<p>给你一个整数数组 1, 2,…, ，它的所有元素都是不同的。</p>
+<p>首先，要求你在数组中再插入一个整数 an+1 。 an +1 不应等于 a1, a2,…,
+an中的任何一个。</p>
+<p>然后，你必须使数组中的所有元素相等。一开始，你选择一个<strong>正</strong>整数
+x。在一次操作中，你将 x 恰好加到数组的一个元素上。<strong>注意， x
+在所有操作中都是一样的</strong>。</p>
+<p>选择 +1 和 x 后，使所有元素相等的最小操作次数是多少？</p>
+<h1 id="题解-1">题解：</h1>
+<p>容易误解的点在于——对一个新增的数x，能否找到 ∑𝑖=1𝑖=𝑛𝑥−𝑎𝑖(𝑥−𝑎𝑖) 小于
+∑𝑖=1𝑖=𝑛𝑚𝑥−𝑎𝑖(𝑚𝑥−𝑎𝑖)
+（mx表示数组中的最大值）由于笔者太拉昆了，暂时先不证明了。。。</p>
+<p>可以凭直觉猜出一个解法，最大的数不变𝑎𝑛𝑠=∑𝑑𝑖𝑓(𝑚𝑥,𝑎[𝑖])(𝑑𝑖𝑓(𝑚𝑥,𝑎[𝑖]))+𝑎𝑑𝑑𝑡𝑖𝑜𝑛其中addtion为以最大公倍数为步减的最大值(𝑚𝑥−𝑎𝑛+1)/(𝑑𝑖𝑓(𝑚𝑥,𝑎[𝑖]))。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">void slove()&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];</span><br><span class="line"></span><br><span class="line">    int mx = -INF;</span><br><span class="line">    for(int i=1;i&lt;=n;i++) &#123;</span><br><span class="line">        mx = max(mx,a[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int i=1;i&lt;=n;i++) d[i] = mx - a[i];</span><br><span class="line"></span><br><span class="line">    int gd = 0;</span><br><span class="line">    for(int i=1;i&lt;=n;i++) gd = __gcd(d[i],gd);</span><br><span class="line"></span><br><span class="line">    if(!gd) &#123;cout&lt;&lt;1&lt;&lt;endl;return ;&#125;</span><br><span class="line"></span><br><span class="line">    ll sum = 0;</span><br><span class="line">    set&lt;int&gt; S;</span><br><span class="line">    for(int i=1;i&lt;=n;i++) sum += (mx - a[i]) / gd,S.insert((mx - a[i]) / gd);</span><br><span class="line">    int t = 1;</span><br><span class="line">    while(1) if(S.count(t)) t++;else break;</span><br><span class="line">    cout&lt;&lt;sum + t&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h1 id="题意-2">题意：</h1>
+<p>对一个数组的所有非空子区间，计算这个公式<span
+class="math display">\[w = \sum_{i=l}^{i=r} \sum_{j=l}^{j=r}a_i \oplus
+a_j \]</span>的和。</p>
+<span id="more"></span>
+<h1 id="题解-2">题解：</h1>
+<p>非常经典的题目，看见了就再巩固一下。</p>
+<ol type="1">
+<li>拆位，
+对于异或这个操作来看，是以位为单位进行的（而且根据数据范围也很容易想到）。我们需要对位进行处理。
+即将整个数组拆分为<span class="math inline">\(\lceil
+log_2mx\rceil\)</span>个数组。计算每一位的贡献。</li>
+</ol>
+<p>当拆位后原式子会变为这样的 <span class="math display">\[
+allW =
+\sum_{l=1}^{l=r}\sum_{r=l}^{r=n}\sum_{i=l}^{i=r}\sum_{x=0}^{x=\lceil
+log_2mx\rceil}cnt(a_{i-x} != a_{x})
+\]</span> 这个复杂度仍然是爆炸的，因此需要继续优化</p>
+<p>很容易想到的一个优化就是，对于<span class="math display">\[a_i \oplus
+a_j\]</span>他是满足交换律的，即<span class="math display">\[a_i \oplus
+a_j = a_j \oplus a_i\]</span>因此我们仅需要计算单边值即可（然后乘2。</p>
+<p>因此将原有的式子改写<span class="math display">\[w =2 \times
+(\sum_{i=l}^{i=r} \sum_{j=l}^{j=i}a_i \oplus a_j) \]</span>虽然对于<span
+class="math display">\[a_i\]</span>本身来说，他仍是对自身算一次的，但异或一定为0，因此不考虑。</p>
+<p>再转头考虑所有子区间的问题，一个数组的所有子区间显然是<span
+class="math display">\[n^2\]</span>级，因此枚举或计算子区间都是无意义的。根据之前的推论，使用经典方法，确定右端点，变化左端点。考虑对每个左右端点i,j计算当前包含的区间数为<span
+class="math display">\[i\times
+(n-j+1)\]</span>（下标从1开始），则对任意i,j，其贡献值为以下公式 <span
+class="math display">\[
+w(bt,{i,j}) = (i\times (n-j+1) * (1&lt;&lt;bt) *
+(bit(x,a_i)\not=bit(x,a_j))
+\]</span> 施展数学的神奇魔法！</p>
+<p>提取公因子，我们便会惊奇的发现，整个问题变成了对于以j结尾的子区间计算<span
+class="math display">\[a_j\]</span> 与<span
+class="math display">\[a_i|i&lt;j\]</span>的在x位上的贡献值。此时静下心来思考维护的数据则是，当前位为0的下标之和与为1的下标之和。</p>
+<p>最后，让我们总结一下，其实很多做法很常见，比如枚举右端点，比如交换律，比如提取公因子，可以说这是基本。总的来讲，这个题就仅仅考了拆位而已，符合小白赛难度。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">slove</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        cin&gt;&gt;a[i];</span><br><span class="line"></span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> bt = <span class="number">0</span>;bt &lt;=<span class="number">29</span>;bt++) &#123;</span><br><span class="line">        ll s1=<span class="number">0</span>,s2 =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i] &gt;&gt;bt&amp;<span class="number">1</span>) &#123;</span><br><span class="line">                ans = (ans + s2 * (n-i<span class="number">+1</span>) % MOD * (<span class="number">1</span>&lt;&lt;bt) % MOD) % MOD;</span><br><span class="line">                s1 += i;</span><br><span class="line">                s1 %= MOD;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                ans = (ans + s1 * (n-i<span class="number">+1</span>) % MOD * (<span class="number">1</span>&lt;&lt;bt) % MOD) % MOD;</span><br><span class="line">                s2 += i;</span><br><span class="line">                s2 %= MOD;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;(<span class="number">2ll</span> * ans)%MOD&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不知不觉已经写了这么多，这题上次见还是许久之前，没想到再见已有这么长时日了，我居然看了这么久，mark。。。</p>
+<hr />
+<h1 id="题意-3">题意：</h1>
+<p>给定m条线段，求将1-n覆盖两次的所有方案数</p>
+<!--more-->
+<h1 id="题解-3">题解：</h1>
+<p>离散数据之后，直接设计dp即可。首先应该注意到对端点进行离散化，然后为简化思考量，我们将整体线段二键值排序。可以观察到，如果出现了悬空（并不前缀）的二次覆盖，如(1-4,2-5)，出现1未二次覆盖，而2覆盖的情况是必然非法的。因为二键值排序使得1永远也不会被覆盖了。因此很容易想到对一次覆盖，二次覆盖的前缀状态做dp。</p>
+<p>个人认为dp最好的老师是暴力，因此本篇将会贴出tle的暴力解法。</p>
+<p>状态表示这样设计：<span
+class="math display">\[dpi,j,k\]</span>表示对前i段线段，覆盖两次最长前缀长度j，覆盖一次最长浅醉长度k的所有方案数。</p>
+<p>之后可以根据segs[i].x
+是否小于两个前缀长度做转移了。暴力转移code如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">slove</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++) &#123;</span><br><span class="line">        cin&gt;&gt;segs[i].x&gt;&gt;segs[i].y;</span><br><span class="line">        poss.<span class="built_in">push_back</span>(segs[i].x);</span><br><span class="line">        poss.<span class="built_in">push_back</span>(segs[i].y);</span><br><span class="line">    &#125;</span><br><span class="line">    poss.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">    poss.<span class="built_in">push_back</span>(n);</span><br><span class="line">    <span class="built_in">sort</span>(<span class="built_in">all</span>(poss));</span><br><span class="line">    poss.<span class="built_in">erase</span>(<span class="built_in">unique</span>(<span class="built_in">all</span>(poss)),poss.<span class="built_in">end</span>());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;poss.<span class="built_in">size</span>();i++) mp[poss[i]] = i;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">sort</span>(segs<span class="number">+1</span>,segs<span class="number">+1</span>+m);</span><br><span class="line"></span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> ii=<span class="number">0</span>;ii&lt;i;ii++) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">200</span>;j;j--) &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">200</span>;k;k--)</span><br><span class="line">                    dp[i][j][k] = dp[ii][j][k];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">200</span>;~j;j--) &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">200</span>;~k;k--) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(mp[segs[i].x] &lt;= j<span class="number">+1</span>) &#123;</span><br><span class="line">                        <span class="keyword">if</span>(mp[segs[i].x] &gt; k<span class="number">+1</span>) &#123;</span><br><span class="line">                            dp[i][<span class="built_in">max</span>(mp[segs[i].y], j)][k] =</span><br><span class="line">                                (dp[i][<span class="built_in">max</span>(mp[segs[i].y],j)][k] + dp[ii][j][k]) % MOD;</span><br><span class="line">                            <span class="comment">// if(dp[i][max(mp[segs[i].y], j)][k]&amp;&amp;dp[ii][j][k]) &#123;</span></span><br><span class="line">                            <span class="comment">//     cout&lt;&lt;ii&lt;&lt;&#x27; &#x27;&lt;&lt;j&lt;&lt;&#x27; &#x27;&lt;&lt;k&lt;&lt;endl;</span></span><br><span class="line">                            <span class="comment">//     cout&lt;&lt;&quot;!&quot;&lt;&lt;i&lt;&lt;&#x27; &#x27;&lt;&lt;max(mp[segs[i].y], j)&lt;&lt;&#x27; &#x27;&lt;&lt;k&lt;&lt;&#x27; &#x27;&lt;&lt;dp[i][max(mp[segs[i].y], j)][k]&lt;&lt;nline;</span></span><br><span class="line">                            <span class="comment">// &#125;</span></span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span> &#123;</span><br><span class="line">                            dp[i][<span class="built_in">max</span>(mp[segs[i].y], j)][<span class="built_in">max</span>(k,<span class="built_in">min</span>(j,mp[segs[i].y]))] =</span><br><span class="line">                                (dp[i][<span class="built_in">max</span>(mp[segs[i].y], j)][<span class="built_in">max</span>(k,<span class="built_in">min</span>(j,mp[segs[i].y]))] + dp[ii][j][k]) % MOD;</span><br><span class="line">                            <span class="comment">// if(dp[i][max(mp[segs[i].y], j)][max(k,min(j,mp[segs[i].y]))]&amp;&amp;dp[ii][j][k]) &#123;</span></span><br><span class="line">                            <span class="comment">//     cout&lt;&lt;ii&lt;&lt;&#x27; &#x27;&lt;&lt;j&lt;&lt;&#x27; &#x27;&lt;&lt;k&lt;&lt;endl;</span></span><br><span class="line">                            <span class="comment">//     cout&lt;&lt;&quot;?&quot;&lt;&lt;i&lt;&lt;&#x27; &#x27;&lt;&lt;max(mp[segs[i].y], j)&lt;&lt;&#x27; &#x27;&lt;&lt;max(k,min(j,mp[segs[i].y]))&lt;&lt;&#x27; &#x27;&lt;&lt;</span></span><br><span class="line">                            <span class="comment">//         dp[i][max(mp[segs[i].y], j)][max(k,min(j,mp[segs[i].y]))]&lt;&lt;nline;</span></span><br><span class="line">                            <span class="comment">// &#125;</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;dp[m][mp[n]][mp[n]]&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码中显然有一个很严重的问题：时间复杂度为<span
+class="math display">\[1.6e^{9}\]</span>略微有点超出复杂度</p>
+<p>其次，对于转移中直接用hax过的值判断是否能够转移是错误的，因为单单hax过后的左端点==右端点+1是不能证明两个区间可以合并的（如：1-3,5-6）hax过后为（1-2,3-4）显然，哈希后合并而实际并不合并。简单！我们只需要存储左端点减1即可。</p>
+<p>时间如何优化？</p>
+<p>首先注意到，（经典的错误）我们每次都需要从前面的每一个i进行转移，我们更改状态的表示，使得，最后的代表前面所有方案数，即在枚举j，k时f[i][j][k]
++= f[i -
+1][j][k];于是时间复杂度完成。再根据官方题解的优化掉只转移覆盖一次的状态（显然二键值排序后导致这种情况必然不存在方案数）。于是复杂的暴力代码变成了下面的形状。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">slove</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++) &#123;</span><br><span class="line">        cin&gt;&gt;segs[i].x&gt;&gt;segs[i].y;</span><br><span class="line">        segs[i].x--;</span><br><span class="line">        poss.<span class="built_in">push_back</span>(segs[i].x);</span><br><span class="line">        poss.<span class="built_in">push_back</span>(segs[i].y);</span><br><span class="line">    &#125;</span><br><span class="line">    poss.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">    poss.<span class="built_in">push_back</span>(n);</span><br><span class="line">    <span class="built_in">sort</span>(<span class="built_in">all</span>(poss));</span><br><span class="line">    poss.<span class="built_in">erase</span>(<span class="built_in">unique</span>(<span class="built_in">all</span>(poss)),poss.<span class="built_in">end</span>());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;poss.<span class="built_in">size</span>();i++) mp[poss[i]] = i;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">sort</span>(segs<span class="number">+1</span>,segs<span class="number">+1</span>+m);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++) &#123;</span><br><span class="line">        segs[i].x = mp[segs[i].x];</span><br><span class="line">        segs[i].y = mp[segs[i].y];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    f[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">1</span>; k &lt;= m; k++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= mp[n]; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i; j &lt;= mp[n]; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (f[k - <span class="number">1</span>][i][j] == <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                f[k][i][j] += f[k - <span class="number">1</span>][i][j];</span><br><span class="line">                f[k][i][j] %=MOD;</span><br><span class="line">                <span class="keyword">if</span> (segs[k].x &lt;= i) &#123;</span><br><span class="line">                    f[k][<span class="built_in">max</span>(i, <span class="built_in">min</span>(j, segs[k].y))][<span class="built_in">max</span>(j, segs[k].y)]+=f[k - <span class="number">1</span>][i][j];</span><br><span class="line">                    f[k][<span class="built_in">max</span>(i, <span class="built_in">min</span>(j, segs[k].y))][<span class="built_in">max</span>(j, segs[k].y)]%=MOD;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;f[m][mp[n]][mp[n]]% MOD&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="ThreeLanes 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="ThreeLanes 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文博主： </strong>ThreeLanes
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://deepcity.github.io/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html" title="状态转移习题">https://deepcity.github.io/2024/状态转移习题/article.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://x.com/DeepCity764637">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.zhihu.com/people/san-xiang-93-13">
+            <span class="icon">
+              <i class="fab fa-zhihu"></i>
+            </span>
+
+            <span class="label">Zhihu</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+              <a href="/tags/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB/" rel="tag"># 状态转移</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/%E4%B8%89%E7%A7%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A8%A1%E6%8B%9F%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/article.html" rel="prev" title="三种操作系统模拟软件使用手册">
+                  <i class="fa fa-angle-left"></i> 三种操作系统模拟软件使用手册
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/%E6%80%9D%E7%BB%B4%E9%A2%98%E4%B9%A0%E9%A2%981/article.html" rel="next" title="思维题1">
+                  思维题1 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>简体中文</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="选择语言">
+      
+        <option value="zh-CN" data-href="/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/en/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html" selected="">
+          English
+        </option>
+      
+        <option value="ja" data-href="/ja/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html" selected="">
+          日本語
+        </option>
+      
+        <option value="ru" data-href="/ru/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html" selected="">
+          Английский
+        </option>
+      
+    </select>
+  </div>
+
+  <div class="beian"><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5taWl0Lmdvdi5jbg==">鄂ICP备2024062830号 </span>
+      <img src="/images/beian.png" alt=""><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5tcHMuZ292LmNuLyMvcXVlcnkvd2ViU2VhcmNoP2NvZGU9MjAyNDA2MjgzMA==">鄂公网安备2024062830号 </span>
+  </div>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ThreeLanes</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">72k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:21</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://vercel.keboe.cn/","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.0.1/alus","https://unpkg.com/@waline/emojis@1.0.1/bilibili","https://unpkg.com/@waline/emojis@1.0.1/qq","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"],"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2024/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E4%B9%A0%E9%A2%98/article.html"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>

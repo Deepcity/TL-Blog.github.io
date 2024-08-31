@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="EzvkH8RisfPPs4FDg8TcP3u6FtkMev8TBOJLPE7OEN4">
+  <meta name="msvalidate.01" content="80DCDC7CC1EB61C078DE11A21469B857">
+  <meta name="baidu-site-verification" content="codeva-zBnxVrCEgy">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=仿宋:300,300italic,400,400italic,700,700italic%7CLobster+Two:300,300italic,400,400italic,700,700italic%7Cfira+code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"deepcity.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Поиск...","empty":"По запросу ничего не найдено: ${query}","hits_time":"${hits} результатов найдено за ${time} мс","hits":"${hits} результатов найдено"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Typora​    Typora是我一直在使用的markdown编辑器，对比起其他的markdown编辑器来说，&#x3D;&#x3D;Obsidian&#x3D;&#x3D;虽然有更加具有逻辑性的文档之间的双向链接和git式的设定，&#x3D;&#x3D;Vscode&#x3D;&#x3D;，&#x3D;&#x3D;Sublime&#x3D;&#x3D;则是Markdown插件构成的markdown编辑器，Typora更加纯粹和统一。具体表现在，它的使用逻辑非常简洁，仅仅只是文档编辑器，除了markdown的即">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么我用Typora——Typora与其他markdown的比较">
+<meta property="og:url" content="https://deepcity.github.io/ru/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html">
+<meta property="og:site_name" content="ThreeLanes&#39; Site">
+<meta property="og:description" content="Typora​    Typora是我一直在使用的markdown编辑器，对比起其他的markdown编辑器来说，&#x3D;&#x3D;Obsidian&#x3D;&#x3D;虽然有更加具有逻辑性的文档之间的双向链接和git式的设定，&#x3D;&#x3D;Vscode&#x3D;&#x3D;，&#x3D;&#x3D;Sublime&#x3D;&#x3D;则是Markdown插件构成的markdown编辑器，Typora更加纯粹和统一。具体表现在，它的使用逻辑非常简洁，仅仅只是文档编辑器，除了markdown的即">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://s2.loli.net/2024/07/21/JY243QnhxmFZLtR.png">
+<meta property="article:published_time" content="2023-08-13T07:20:34.000Z">
+<meta property="article:modified_time" content="2024-08-14T13:39:02.000Z">
+<meta property="article:author" content="ThreeLanes">
+<meta property="article:tag" content="Typora">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="随笔">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/07/21/JY243QnhxmFZLtR.png">
+
+
+<link rel="canonical" href="https://deepcity.github.io/ru/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"ru","comments":true,"permalink":"https://deepcity.github.io/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html","path":"ru/2023/为什么我用Typora——Typora与其他markdown的比较/article.html","title":"为什么我用Typora——Typora与其他markdown的比较"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>为什么我用Typora——Typora与其他markdown的比较 | ThreeLanes' Site</title>
+  
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="https://vercel.keboe.cn/">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="ThreeLanes' Site" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Показать/скрыть меню" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ThreeLanes' Site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">共享 开放 包容 改进</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Поиск" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Главная</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>О сайте</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Тэги</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Категории</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Архив</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Планировщик</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Карта сайта</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Страница 404</a></li><li class="menu-item menu-item-monitor"><span class="exturl" data-url="aHR0cHM6Ly91cHRpbWUua2Vib2UuY24vc3RhdHVzL3Rlc3Q="><i class="fa fa-computer fa-fw"></i>监控器</span></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Поиск
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Поиск..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Содержание
+        </li>
+        <li class="sidebar-nav-overview">
+          Обзор
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora"><span class="nav-number">1.</span> <span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora%E7%9A%84Markdown%E8%AF%AD%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Typora的Markdown语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97%E8%AF%AD%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">代码块语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Html%E3%80%81js%E3%80%81css"><span class="nav-number">2.2.</span> <span class="nav-text">Html、js、css</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora%E4%B8%AD%E7%9A%84Mermaid%EF%BC%8CLatex"><span class="nav-number">3.</span> <span class="nav-text">Typora中的Mermaid，Latex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora%E4%B8%AD%E7%9A%84%E5%AA%92%E4%BD%93"><span class="nav-number">4.</span> <span class="nav-text">Typora中的媒体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora%E7%9A%84%E6%96%87%E6%A1%A3%E4%BF%9D%E5%AD%98%E6%9C%BA%E5%88%B6"><span class="nav-number">5.</span> <span class="nav-text">Typora的文档保存机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E4%B8%BB%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">Typora的个性化主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%AF%94%E8%BE%83%E5%AE%9E%E7%94%A8%E7%9A%84%E4%B8%8D%E5%9C%A8Typora%E6%96%87%E6%A1%A3%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="nav-number">8.</span> <span class="nav-text">一些比较实用的不在Typora文档中的使用技巧</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ThreeLanes</p>
+  <div class="site-description" itemprop="description">这是一个个人blog站点，记录技术与知识文章</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-name">Архив</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-name">Категории</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-name">Тэги</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0RlZXBjaXR5" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Deepcity"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmYxMTU5NDcyODk5QDE2My5jb20=" title="E-Mail → mailto:f1159472899@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly94LmNvbS9EZWVwQ2l0eTc2NDYzNw==" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;DeepCity764637"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="c2t5cGU6R2FuZyBTdW4/Y2FsbHxjaGF0" title="Skype → skype:Gang Sun?call|chat"><i class="fab fa-skype fa-fw"></i>Skype</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmtlYm9lLmNuL2ltYWdlcy9xcS1jb250YWN0LnBuZw==" title="QQ → https:&#x2F;&#x2F;blog.keboe.cn&#x2F;images&#x2F;qq-contact.png"><i class="fab fa-qq fa-fw"></i>QQ</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ru">
+    <link itemprop="mainEntityOfPage" href="https://deepcity.github.io/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ThreeLanes">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ThreeLanes' Site">
+      <meta itemprop="description" content="这是一个个人blog站点，记录技术与知识文章">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="为什么我用Typora——Typora与其他markdown的比较 | ThreeLanes' Site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          为什么我用Typora——Typora与其他markdown的比较<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL0RlZXBjaXR5L2RlZXBjaXR5LmdpdGh1Yi5pby90cmVlL21haW4vc291cmNlL19wb3N0cy/kuLrku4DkuYjmiJHnlKhUeXBvcmHigJTigJRUeXBvcmHkuI7lhbbku5ZtYXJrZG93bueahOavlOi+gy5tZA==" title="Редактировать запись"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Размещено</span>
+
+      <time title="Создано: 2023-08-13 15:20:34" itemprop="dateCreated datePublished" datetime="2023-08-13T15:20:34+08:00">2023-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Изменено</span>
+      <time title="Изменено: 2024-08-14 21:39:02" itemprop="dateModified" datetime="2024-08-14T21:39:02+08:00">2024-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">В категории</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6/%E7%BC%96%E8%BE%91%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">编辑器</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6/%E7%BC%96%E8%BE%91%E5%99%A8/Markdown/" itemprop="url" rel="index"><span itemprop="name">Markdown</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Просмотров" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Просмотров: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline: </span>
+  
+    <a title="waline" href="/ru/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/ru/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="Кол-во символов в статье">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Кол-во символов в статье: </span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="Время чтения">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Время чтения &asymp;</span>
+      <span>4 мин.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><p>​    Typora是我一直在使用的markdown编辑器，对比起其他的markdown编辑器来说，==Obsidian==虽然有更加具有逻辑性的文档之间的双向链接和git式的设定，==Vscode==，==Sublime==则是Markdown插件构成的markdown编辑器，Typora更加纯粹和统一。具体表现在，它的使用逻辑非常简洁，仅仅只是文档编辑器，除了markdown的即时渲染之外，并没有过多独特的特性，在编辑上的极致优化使得它受众广泛。</p>
+<span id="more"></span>
+<h2 id="Typora的Markdown语法"><a href="#Typora的Markdown语法" class="headerlink" title="Typora的Markdown语法"></a>Typora的Markdown语法</h2><p>​    Typora中的Markdown语法分为严格和非严格两种语法格式，这里建议使用严格语法格式，提高文档的可移植性并且养成良好的习惯。</p>
+<p>​    但由于各个平台之间的的Markdown语法标准并不统一，比较常见的有ZhihuMarkdown，CSDNMarkdown和GithubMarkdown，在不同的Markdown语法中，对文字的渲染有所不同，主要的差异集中在<strong>Latex语法格式</strong>。</p>
+<p>​    因此，如果你有一份md文本，在release时tag自己的环境是一个不错的选择。</p>
+<blockquote>
+<p>ps: 根据互联网信息，Markdown语法截至24/7/21仍然未完成统一，这是一片未被规范化的蓝海，希望尽快规范化</p>
+</blockquote>
+<!--more-->
+<h3 id="代码块语法"><a href="#代码块语法" class="headerlink" title="代码块语法"></a>代码块语法</h3><p>​    代码块几乎支持所有语言的高亮，并且支持对解释性语言的即时运行</p>
+<h3 id="Html、js、css"><a href="#Html、js、css" class="headerlink" title="Html、js、css"></a>Html、js、css</h3><p>​    Typora实际上是一个浏览器控制样式的文本编辑工具，因此在typora的配置文件中，可以通过修改css达到统一样式控制的效果，甚至可以全部用html编写实现一个web页面。</p>
+<p>​    通过html也可以实现索引官方的方式是 <code>[这样]()</code></p>
+<h2 id="Typora中的Mermaid，Latex"><a href="#Typora中的Mermaid，Latex" class="headerlink" title="Typora中的Mermaid，Latex"></a>Typora中的Mermaid，Latex</h2><p>​    Markdown语法格式中的两个接近标准化的工具Latex，Mermaid，前者侧重于学术理论，后者侧重于图像绘制、文档整理。Latex的格式渲染以及宏包功能更强大，Mermaid更利于编写。二者都具有强大的功能和实用性。个人认为MD文档的特色主要就在于即时渲染，索引结构、对图表绘制的支持。</p>
+<p>​    但值得注意的是Mermaid中的Fontawesome 为v5版本，而latest version为v6，因此<strong>Typora并未bundle Fontawesome</strong>。因此无法使用fa: fa-xxx表示图标。</p>
+<h2 id="Typora中的媒体"><a href="#Typora中的媒体" class="headerlink" title="Typora中的媒体"></a>Typora中的媒体</h2><p>​    Typora支持插入图片，视频，音频。但总的来讲，对一个md文档，图片占用的频率是最大的。基于此，Typora对上传图片做了优化，基于Picgo和图床对图片进行了上传功能的实现，具体配置方法为：</p>
+<ol>
+<li>以ssms图床为例<span class="exturl" data-url="aHR0cHM6Ly9zbS5tcy8=">Image Upload - SM.MS - Simple Free Image Hosting<i class="fa fa-external-link-alt"></i></span></li>
+<li>到ssms官网注册张航并拿到apikey</li>
+<li>填入picgo插件的配置文件</li>
+<li><img src="https://s2.loli.net/2024/07/21/JY243QnhxmFZLtR.png" alt="配置图"></li>
+</ol>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;picBed&quot;: &#123;</span><br><span class="line">    &quot;current&quot;: &quot;smms&quot;,</span><br><span class="line">    &quot;smms&quot;: &#123;</span><br><span class="line">      &quot;token&quot;: &quot;xxx&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;picgoPlugins&quot;: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ol>
+<li>测试并运行</li>
+</ol>
+<h2 id="Typora的文档保存机制"><a href="#Typora的文档保存机制" class="headerlink" title="Typora的文档保存机制"></a>Typora的文档保存机制</h2><p>​    当Typora保存一个文档时通常会在本地保存多个文档不同时间节点的副本，并建立可恢复的索引，这样的措施虽然占用了一些空间，但是从我自己体验的角度来说，他帮助我恢复了多个因各种原因丢失的文档，搭配everything使用，几乎可以避免掉盘之外的数据丢失</p>
+<h2 id="Typora的个性化主题"><a href="#Typora的个性化主题" class="headerlink" title="Typora的个性化主题"></a>Typora的个性化主题</h2><p>​    Typora在Github上有许多用户自定义的主题，我个人简单使用的是Github的官方主题。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>​    对不需要太多功能的md文档编写具有很强的优势，如果不喜欢Obsidian的逻辑，不适应复杂的功能设计，可以使用Typora，它的程序设计逻辑与Word，Notebility很相似，最初拿来只做非常简单的工作，然后因为各种需求逐渐加深使用的功能。即使在程序设计的思想上没有使用如git，文件索引这种现代化的思想，但在编写上的巅峰造极也成就了Typora。</p>
+<h2 id="一些比较实用的不在Typora文档中的使用技巧"><a href="#一些比较实用的不在Typora文档中的使用技巧" class="headerlink" title="一些比较实用的不在Typora文档中的使用技巧"></a>一些比较实用的不在Typora文档中的使用技巧</h2><ol>
+<li><p>通过html标签扩展typora的显示格式</p>
+<p>如<code>&lt;details&gt;&lt;/details&gt;</code>标签可以显示一个展开栏，做错题本时很好用</p>
+</li>
+<li><p>一个很常见的Typora插件，更新了typora的显示格式，内置思维导图与类似python的格式提醒typora_plugin</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL29iZ25haWwvdHlwb3JhX3BsdWdpbg==">obgnail/typora_plugin: Typora plugin. Feature enhancement tool | Typora 插件，功能增强工具 (github.com)<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ol>
+<hr>
+<p>待更新</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Донат
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="ThreeLanes WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="ThreeLanes Alipay">
+        <span>Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Автор записи:  </strong>ThreeLanes
+  </li>
+  <li class="post-copyright-link">
+      <strong>Ссылка на запись: </strong>
+      <a href="https://deepcity.github.io/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html" title="为什么我用Typora——Typora与其他markdown的比较">https://deepcity.github.io/2023/为什么我用Typora——Typora与其他markdown的比较/article.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Информация об авторских правах:  </strong>Все записи на этом сайте защищены лицензией <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span>, если не указано дополнительно.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Добро пожаловать на другие мои издательские каналы</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://x.com/DeepCity764637">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.zhihu.com/people/san-xiang-93-13">
+            <span class="icon">
+              <i class="fab fa-zhihu"></i>
+            </span>
+
+            <span class="label">Zhihu</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Typora/" rel="tag"># Typora</a>
+              <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+              <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag"># 随笔</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/%E4%B8%89%E7%A7%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A8%A1%E6%8B%9F%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/article.html" rel="next" title="三种操作系统模拟软件使用手册">
+                  三种操作系统模拟软件使用手册 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>Английский</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="Выберите язык">
+      
+        <option value="zh-CN" data-href="/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/en/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html" selected="">
+          English
+        </option>
+      
+        <option value="ja" data-href="/ja/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html" selected="">
+          日本語
+        </option>
+      
+        <option value="ru" data-href="/ru/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html" selected="">
+          Английский
+        </option>
+      
+    </select>
+  </div>
+
+  <div class="beian"><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5taWl0Lmdvdi5jbg==">鄂ICP备2024062830号 </span>
+      <img src="/images/beian.png" alt=""><span class="exturl" data-url="aHR0cHM6Ly9iZWlhbi5tcHMuZ292LmNuLyMvcXVlcnkvd2ViU2VhcmNoP2NvZGU9MjAyNDA2MjgzMA==">鄂公网安备2024062830号 </span>
+  </div>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ThreeLanes</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Общее кол-во символов">72k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Общее время чтения">4:21</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Всего посетителей">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Всего просмотров">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Генератор — <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="В начало">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"ru","enable":true,"serverURL":"https://vercel.keboe.cn/","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"emoji":["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.0.1/alus","https://unpkg.com/@waline/emojis@1.0.1/bilibili","https://unpkg.com/@waline/emojis@1.0.1/qq","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"],"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/ru/2023/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%94%A8Typora%E2%80%94%E2%80%94Typora%E4%B8%8E%E5%85%B6%E4%BB%96markdown%E7%9A%84%E6%AF%94%E8%BE%83/article.html"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
