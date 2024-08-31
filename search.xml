@@ -4080,6 +4080,7 @@ class="math display">\[1.6e^{9}\]</span>略微有点超出复杂度</p>
 <p>已然是不知道从何处了解到的anaconda了，但它默认成为了我的python编译器指定选项，于是今天来了解一下Anaconda是什么，它是干什么的。</p>
 <h2 id="包管理器">包管理器</h2>
 <p>Anaconda（<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5hY29uZGEuY29tL2Rvd25sb2FkLyNtYWNvcw==">官方网站<i class="fa fa-external-link-alt"></i></span>）就是可以便捷获取包且对包能够进行管理，同时对环境可以统一管理的发行版本。Anaconda包含了conda、Python在内的超过180个科学包及其依赖项。</p>
+<span id="more"></span>
 <h3 id="特点">特点</h3>
 <ol type="1">
 <li>anaconda是一款开源软件</li>
