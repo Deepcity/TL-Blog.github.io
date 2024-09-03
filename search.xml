@@ -4198,7 +4198,7 @@ install</p></li>
 <p>卷积神经网络（Convolutional Neural Networks, CNN）的复杂性和灵活性使其成为深度学习领域的核心研究主题之一。</p>
 </blockquote>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>卷积神经网络的灵感源自<strong>人类视觉系统</strong>，特别是<strong>视觉皮层中的神经元结构</strong>。自Hubel和Wiesel在1962年的开创性工作以来，这一理念已经引发了一系列研究和发展。</p>
-<!---more-->
+<span id="more"></span>
 <p><strong>早期发展</strong>: 由Yann LeCun等人在上世纪80年代末到90年代初开发的LeNet-5被视为第一个成功的卷积神经网络。LeNet-5在手写数字识别方面取得了令人印象深刻的结果。</p>
 <p><strong>现代崛起</strong>: 随着硬件的快速进展和<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9zb2x1dGlvbi9iaWdkYXRhP2Zyb21fY29sdW1uPTIwMDY1JmZyb209MjAwNjU=">大数据<i class="fa fa-external-link-alt"></i></span>的涌现，CNN在21世纪初开始重新崛起，并在各个领域实现了突破性进展。</p>
 <p>CNN的重要性不仅体现在其精度和效率上，而且还体现在其理论洞见上。例如，卷积层通过共享权重减少了参数数量，这有助于更有效地训练模型，还增强了模型对平移不变性的理解。</p>
