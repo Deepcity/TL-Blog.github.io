@@ -1,3 +1,4 @@
+https://deepcity.github.io/2024/Zotero%E5%88%9D%E8%A7%81%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/article.html
 https://deepcity.github.io/2024/%E8%8B%B1%E8%AF%AD%E5%AE%9E%E8%B7%B5%E8%A1%A5%E5%85%85%E8%AE%B0%E5%BD%95/article.html
 https://deepcity.github.io/2024/CNN%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/article.html
 https://deepcity.github.io/2024/PyTorch%E5%AE%9E%E6%88%98-CV-classification/article.html
@@ -100,6 +101,8 @@ https://deepcity.github.io/tags/PyTorch/
 https://deepcity.github.io/tags/CV/
 https://deepcity.github.io/tags/%E5%88%86%E7%B1%BB%E5%99%A8/
 https://deepcity.github.io/tags/English/
+https://deepcity.github.io/tags/%E5%AD%A6%E6%9C%AF/
+https://deepcity.github.io/tags/Zotero/
 https://deepcity.github.io/categories/%E6%AF%94%E8%B5%9B/
 https://deepcity.github.io/categories/%E6%AF%94%E8%B5%9B/%E6%A8%A1%E6%8B%9F%E8%B5%9B/
 https://deepcity.github.io/categories/%E8%BD%AF%E4%BB%B6/
@@ -152,3 +155,4 @@ https://deepcity.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E6%9
 https://deepcity.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/PyTorch/
 https://deepcity.github.io/categories/%E5%A4%96%E8%AF%AD/
 https://deepcity.github.io/categories/%E5%A4%96%E8%AF%AD/English/
+https://deepcity.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%96%87%E6%A1%A3/%E5%AD%A6%E6%9C%AF/
