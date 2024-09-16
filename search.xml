@@ -4733,52 +4733,46 @@ of truly taking advantages of English for dialogs to maked sure I really
       </tags>
   </entry>
   <entry>
-    <title>Zotero初见简明介绍</title>
+    <title>Zotero简明介绍</title>
     <url>/2024/Zotero%E5%88%9D%E8%A7%81%E7%AE%80%E6%98%8E%E4%BB%8B%E7%BB%8D/article.html</url>
-    <content><![CDATA[<h1 id="zotero">Zotero</h1>
-<p>阅读文献并不是一项简单的，附加在科研上的小工作，作为科研人的眼睛，阅读文献是一项基础重要的能力。</p>
+    <content><![CDATA[<h1 id="Zotero"><a href="#Zotero" class="headerlink" title="Zotero"></a>Zotero</h1><p>阅读文献并不是一项简单的，附加在科研上的小工作，作为科研人的眼睛，阅读文献是一项基础重要的能力。</p>
 <p>Zotero就是这样一个工具，它用来帮助人们更好的收集，阅读，理解文献。</p>
 <span id="more"></span>
-<h2 id="为什么需要用zotero">为什么需要用Zotero</h2>
-<ol type="1">
+<h2 id="为什么需要用Zotero"><a href="#为什么需要用Zotero" class="headerlink" title="为什么需要用Zotero"></a>为什么需要用Zotero</h2><ol>
 <li><p>多开论文阅读</p>
 <blockquote>
 <p>在长时间阅读论文后总会有许多论文被同时打开，在网站上显示不仅占用了大量内存，而且不便于保存。</p>
-</blockquote></li>
+</blockquote>
+</li>
 <li><p>为了更准确的找到所需论文</p>
 <blockquote>
 <p>对于不同论文之间相互引用，查找一个经典的，高引用的相关论文通常在浏览器中需要多步，而借助Zotero可以帮助我们更快的定位以及了解论文水平。</p>
-</blockquote></li>
+</blockquote>
+</li>
 <li><p>为了更方便的阅读论文</p>
 <blockquote>
 <p>在如今时代，AI助手遍布各行各业，尤其是学术界，一个好的使用prompt的方式能成倍提高人的效率，一个好的问题能直接解决问题。借助ZoteroAI可以方便快捷的阅读论文。</p>
-</blockquote></li>
+</blockquote>
+</li>
 <li><p>为了理解论文作者之间的关系</p>
 <blockquote>
 <p>在查询同行进度时，我们时常要开盒同行，看看其他人都在做什么，防止撞车，借助Zotero可以更清晰的了解到作者之间的关系。</p>
-</blockquote></li>
+</blockquote>
+</li>
 <li><p>更加复杂的笔记标注</p>
 <blockquote>
 <p>在Zotero上可以见到更加多的笔记方式，以完成理解与回顾。</p>
-</blockquote></li>
+</blockquote>
+</li>
 </ol>
-<h2 id="安装zotero快速步骤">安装Zotero快速步骤</h2>
-<ol type="1">
-<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuem90ZXJvLm9yZy8=">Zotero | Your personal research
-assistant<i class="fa fa-external-link-alt"></i></span></li>
+<h2 id="安装Zotero快速步骤"><a href="#安装Zotero快速步骤" class="headerlink" title="安装Zotero快速步骤"></a>安装Zotero快速步骤</h2><ol>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuem90ZXJvLm9yZy8=">Zotero | Your personal research assistant<i class="fa fa-external-link-alt"></i></span></li>
 <li>根据指示下载对应浏览器插件</li>
 </ol>
-<h3 id="安装一些常用插件">安装一些常用插件</h3>
-<figure>
-<img src="https://s2.loli.net/2024/09/16/UlstJoneF2q1j5C.png"
-alt="Plugins" />
-<figcaption aria-hidden="true">Plugins</figcaption>
-</figure>
-<p>在<span class="exturl" data-url="aHR0cHM6Ly96b3Rlcm8tY2hpbmVzZS5jb20v">Zotero 中文社区 | Zotero
-中文维护小组
-(zotero-chinese.com)<i class="fa fa-external-link-alt"></i></span>中安装对应插件，并根据网络教程配置与学习使用他们。</p>
+<h3 id="安装一些常用插件"><a href="#安装一些常用插件" class="headerlink" title="安装一些常用插件"></a>安装一些常用插件</h3><p><img src="https://s2.loli.net/2024/09/16/UlstJoneF2q1j5C.png" alt="Plugins"></p>
+<p>在<span class="exturl" data-url="aHR0cHM6Ly96b3Rlcm8tY2hpbmVzZS5jb20v">Zotero 中文社区 | Zotero 中文维护小组 (zotero-chinese.com)<i class="fa fa-external-link-alt"></i></span>中安装对应插件，并根据网络教程配置与学习使用他们。</p>
 <p>这里做简单介绍</p>
-<ol type="1">
+<ol>
 <li>Awesome GPT：AI assistant</li>
 <li>Better Note：笔记插件，也有一些查询关系网的附加功能</li>
 <li>Ethereal Reference：帮助word编写引用与Zetore建立联系</li>
@@ -4786,10 +4780,8 @@ alt="Plugins" />
 <li>茉莉花：增强对中文期刊的适配</li>
 <li>Translate：内置翻译，方便快捷</li>
 </ol>
-<h2 id="参考">参考</h2>
-<ol type="1">
-<li><span class="exturl" data-url="aHR0cHM6Ly96b3Rlcm8tY2hpbmVzZS5jb20v">Zotero 中文社区 | Zotero
-中文维护小组 (zotero-chinese.com)<i class="fa fa-external-link-alt"></i></span></li>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><span class="exturl" data-url="aHR0cHM6Ly96b3Rlcm8tY2hpbmVzZS5jb20v">Zotero 中文社区 | Zotero 中文维护小组 (zotero-chinese.com)<i class="fa fa-external-link-alt"></i></span></li>
 </ol>
 ]]></content>
       <categories>
