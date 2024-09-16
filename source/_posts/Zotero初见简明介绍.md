@@ -1,5 +1,5 @@
 ---
-title: Zotero初见简明介绍
+title: Zotero简明介绍
 date: 2024-09-16 16:30:23
 categories:
 - 软件
